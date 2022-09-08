@@ -32,7 +32,7 @@ router.get("/", (req, res, next) => {
         });
 });
 
-router.get('/:employeeId', (req, res, next) => {
+router.get('/:employeeId', (req, res) => {
     const id = req.params.employeeId;
     Data.findById(id)
         .select('name email phone course _id')
